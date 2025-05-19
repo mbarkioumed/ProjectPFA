@@ -27,7 +27,7 @@ public class InitializrService {
             String javaVersion, String springBootVersion, String dependencies,
             String outputDir) throws IOException {
 
-        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(INITIALIZR_URL)
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(INITIALIZR_URL)
                 .queryParam("type", "maven-project") // Or gradle-project
                 .queryParam("language", "java")
                 .queryParam("platformVersion", springBootVersion) // Renamed from bootVersion
